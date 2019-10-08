@@ -12,26 +12,34 @@ var applesDict: [String: Int] = ["Adam": 3,
 
 // a. Set eveAppleCount equal to the number of apples that Eve has
 
-let eveAppleCount: Int = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
+let eveAppleCount: Int = applesDict["Eve"] ??  -1
+assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
 
 // b. Change the number of apples that Adam  has to 4
 
+applesDict["Adam"] = 4
 // Your code here
-//assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
+assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
 
 // c. Set calAndDanAppleCount equal to the sum of both of those
+applesDict["Cal"] = 3
+applesDict["Dan"] = 5
 
-let calAndDanAppleCount = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
+let calAndDanAppleCount = (applesDict["Dan"] ?? -1) + (applesDict["Cal"] ?? -1)
+assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount))")
 
 // d. Set all the values in applesDict to 0
 
 // Your code here
 
-//for (_, value) in applesDict {
-//    assert(value == 0, "Was expecting 0, but got \(value)")
-//}
+//for (index, value) in applesDict {
+//    assert(applesDict == 0, "Was expecting 0, but got \(applesDict)")
+////}
+    
+    
+    
+    
+    
 
 // Question Two
 
@@ -41,14 +49,14 @@ var citiesDict: [String: String] = ["Afghanistan": "Kabul",
 
 // a. Set russiaCapital equal to Russia's capital using citiesDict
 
-let russiaCapital = /* Your code here (Replace "" with your solution)*/ ""
-//assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
+let russiaCapital = citiesDict["Russia"]  /* Your code here (Replace "" with your solution)*/
+assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
     
 // b. Add a new key value pair "Jamaica" and its capital "Kingston"
 
 // Your code here
-
-//assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
+citiesDict["Jamaica"] = "Kingston"
+assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
 
 // c. Add a new key value pair "Indonesia" and its capital "Jakarta"
 
@@ -128,18 +136,18 @@ var highestScoringName = ""
 // Question Five
 
 // Write code below such that cubeDict maps the numbers between 1 and 20 inclusive to their cubes.  A number's cube is that number multiplied by itself twice:
-// 2 ^ 3 = 2 * 2 * 2 = 8
+ 2 ^ 3 = 2 * 2 * 2 = 8
 
 var cubeDict: [Int: Int] = [:]
 
 // Your code here
 
-//assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
-//assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
-//assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
-//assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
-//assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
-//assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
+assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
+assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
+assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
+assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
+assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
+assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
 
 
 // Question Six
